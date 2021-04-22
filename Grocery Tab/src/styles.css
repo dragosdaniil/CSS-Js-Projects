@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg: hsla(199, 80%, 84%, 0.664);
+  --cart-bg: hsla(198, 55%, 94%, 0.932);
+  --edit-btn: hsla(110, 81%, 50%, 0.932);
+  --delete-btn: hsl(0, 87%, 43%);
+  --clear-btn: hsla(198, 81%, 44%, 0.932);
+}
+
+body {
+  background-color: var(--bg);
+}
+/* ALIGN THE MAIN SECTION */
+.section-center {
+  display: grid;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
+  margin-top: 8rem;
+  background-color: var(--cart-bg);
+  row-gap: 10px;
+  place-items: center;
+  text-align: center;
+  border-radius: 1.25rem;
+}
+
+h3 {
+  color: var(--clear-btn);
+  margin: 5px auto;
+}
+
+.alert {
+  color: red;
+  margin: 5px;
+  font-weight: bolder;
+}
+
+.grocery-container {
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto;
+}
+
+.grocery-list {
+  margin: 5px auto;
+}
+
+.item {
+  display: grid;
+  max-width: 35vw;
+  grid-template-columns: 25vw 10vw;
+  place-items: center;
+}
+
+h4 {
+  text-align: left;
+  width: 100%;
+}
+
+.clear-btn {
+  width: 3rem;
+}
+
+.edit-btn,
+.clear-btn,
+.delete-btn,
+.submit-btn,
+.edit-form-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.edit-btn {
+  color: var(--edit-btn);
+}
+.delete-btn {
+  color: var(--delete-btn);
+}
+.clear-btn {
+  color: var(--clear-btn);
+  font-size: 1.5rem;
+  height: 1.8rem;
+  width: auto;
+}
+
+.edit-btn:hover,
+.clear-btn:hover,
+.delete-btn:hover,
+.submit-btn:hover,
+.edit-form-btn:hover {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.edit-btn:active,
+.clear-btn:active,
+.delete-btn:active,
+.submit-btn:active,
+.edit-form-btn:active {
+  background-color: rgba(5, 47, 102, 0.747);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2) inset;
+}
+
+.form {
+  display: grid;
+  grid-template-areas: "a b";
+  grid-template-columns: auto auto;
+  place-items: center;
+}
+
+.submit-btn,
+.edit-form-btn {
+  width: auto;
+  grid-area: b;
+  color: var(--clear-btn);
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: 5px;
+}
+
+.edit-form-btn {
+  display: none;
+}
+
+input {
+  outline: none;
+  width: 30vw;
+  height: 100%;
+}
+
+.delete-item {
+  display: none;
+}
+
+.alert-danger {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.alert-success {
+  color: rgb(11, 180, 11);
+  background-color: rgba(0, 0, 0, 0.5);
+}
