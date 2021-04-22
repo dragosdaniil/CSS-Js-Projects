@@ -1,0 +1,164 @@
+:root {
+  --trans: all 0.5s linear;
+  --bg1: hsl(208, 65%, 91%);
+  --bg-side: hsl(209, 74%, 75%);
+  --font: hsl(209, 78%, 37%);
+  --hdg: hsl(209, 86%, 36%);
+  --shadow: 4px 4px 7px rgba(0, 0, 0, 0.3) inset;
+}
+body {
+  background-color: var(--bg1);
+  height: 250vh;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--font);
+  transition: var(--trans);
+}
+a:hover {
+  background-color: var(--font);
+  color: var(--bg1);
+  box-shadow: var(--shadow);
+}
+.link-list li {
+  width: 100%;
+  transition: var(--trans);
+}
+
+.link-list li:hover {
+  transform: translateX(10px);
+  color: rgb(226, 242, 243);
+}
+button {
+  background-color: transparent;
+  border: transparent;
+  font-size: 2rem;
+  color: var(--font);
+  outline: none;
+}
+button:hover {
+  background-color: var(--font);
+  color: var(--bg1);
+}
+
+.side-toggle {
+  top: 5px;
+  left: 95%;
+  position: fixed;
+  height: 3rem;
+  width: 3rem;
+  z-index: 1;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--hdg);
+}
+
+.sidebar-header {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-media-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.social-media-list li {
+  margin: 5px;
+  transition: var(--trans);
+}
+
+.social-media-list li:hover {
+  transform: translate(5px, -10px);
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  position: fixed;
+  height: 100%;
+  background-color: var(--bg-side);
+  animation: slide-in 0.5s linear;
+}
+
+.link-list {
+  display: block;
+  place-self: center;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 865px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+  .side-close,
+  a {
+    font-size: 1.75rem;
+  }
+  .sidebar {
+    display: grid;
+    width: 0;
+    overflow: hidden;
+    background-color: transparent;
+    animation: slide-out 0.5s linear;
+  }
+  .show {
+    width: 35%;
+    background-color: var(--bg-side);
+    animation: slide-in 0.5s linear;
+  }
+  .side-toggle {
+    left: 90%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .sidebar {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .sidebar {
+    width: 25%;
+  }
+}
+@keyframes slide-in {
+  0% {
+    width: 0;
+    background-color: transparent;
+  }
+  100% {
+    width: 35%;
+    background-color: var(--bg-side);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    width: 35%;
+    background-color: var(--bg-side);
+  }
+  100% {
+    width: 0;
+    background-color: transparent;
+  }
+}

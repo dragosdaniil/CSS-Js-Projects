@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "a a b" "a a a" "a a a";
+  place-items: center;
+  text-align: center;
+}
+
+.video-container {
+  z-index: -10;
+  grid-area: inners;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+.loading {
+  z-index: -20;
+  grid-area: inners;
+}
+
+.content {
+  grid-area: inners;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: auto;
+  height: auto;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  z-index: 2;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  background-color: rgba(0, 0, 0, 0.514);
+  border-radius: 0.25rem;
+}
+
+button {
+  display: inline-block;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  outline: 0;
+  font-size: 1.25rem;
+  color: black;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.43);
+  color: white;
+}
+
+.slider {
+  height: 2rem;
+  width: 34px;
+  z-index: 10;
+  color: transparent;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  border-radius: 0.25rem;
+}
+
+.play-btn {
+  bottom: 5%;
+  left: 5%;
+  animation: slide-left 0.5s linear;
+  background-color: turquoise;
+  color: turquoise;
+}
+
+.pause-btn {
+  bottom: 5%;
+  left: calc(5% + 34px);
+  animation: slide-right 0.5s linear;
+  background-color: turquoise;
+  color: turquoise;
+}
+
+@keyframes slide-right {
+  0% {
+    left: 5%;
+  }
+  100% {
+    left: calc(5% + 34px);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    left: calc(5% + 34px);
+  }
+  100% {
+    left: 5%;
+  }
+}

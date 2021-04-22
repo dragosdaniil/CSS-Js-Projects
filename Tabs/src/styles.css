@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  place-items: center;
+  max-height: 70%;
+  background-color: rgb(233, 238, 184);
+  padding: 20px;
+  border-radius: 5%;
+}
+
+.info-container {
+  display: grid;
+  grid-template-rows: 15% 85%;
+  height: 100%;
+  row-gap: 10px;
+}
+
+.img-container {
+  height: 100%;
+}
+
+img {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+}
+
+.btn-bar {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.toggle-btn {
+  background-color: darkolivegreen;
+  font-family: sans-serif;
+  color: rgb(189, 119, 28);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}

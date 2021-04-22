@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/86bccfe578.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <video muted autoplay loop class="video-container" id="myVideo">
+        <source src="../video/video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="loading">
+        <img src="../images/loader.gif" alt="loader" class="loader" />
+      </div>
+
+      <div class="content">
+        <h1>Video project</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem quasi corrupti, provident temporibus nesciunt
+          doloremque dolorem ad qui possimus neque.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="play">
+          <i class="fas fa-play"></i>
+        </button>
+        <button class="pause">
+          <i class="fas fa-pause"></i>
+        </button>
+      </div>
+      <div class="slider play-btn">d</div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

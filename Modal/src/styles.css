@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(
+      rgba(121, 241, 245, 0.5),
+      rgba(100, 100, 100, 0.5)
+    ),
+    url("../images/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  grid-template-areas: "inners";
+  place-items: center;
+}
+
+.hero {
+  font-size: 1.5rem;
+  grid-area: inners;
+  background-color: rgb(78, 210, 230);
+  display: flex;
+  height: 400px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2.5rem;
+}
+
+.modal-overlay {
+  grid-area: inners;
+  z-index: -10;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 0;
+  width: 0;
+  background-color: rgba(235, 241, 241, 0.863);
+  border-radius: 2.5rem;
+  position: relative;
+}
+
+.modal-container {
+  height: 300px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: rgba(151, 227, 241, 0.842);
+  border-radius: 2rem;
+}
+
+.show-modal {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  height: 50px;
+  width: 100px;
+  font-size: 1rem;
+}
+.btn:hover {
+  background-color: rgba(108, 233, 233, 0.781);
+  box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+.close-modal {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  color: rgb(10, 126, 126);
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  top: 10%;
+  left: 90%;
+  position: absolute;
+  float: right;
+}
+
+.close-modal:hover {
+  background-color: rgba(108, 233, 233, 0.781);
+  box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.2) inset;
+}
