@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg1: hsl(226, 66%, 15%);
+  --bg2: hsl(221, 87%, 27%);
+  --bg3: hsl(214, 93%, 44%);
+  --bg4: hsl(222, 87%, 91%);
+  --bg5: hsl(223, 53%, 17%);
+  --text1: hsl(221, 90%, 24%);
+  --number: hsl(221, 73%, 72%);
+  --borderRadius: 0.4rem;
+}
+
+.section-center {
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: var(--borderRadius);
+  border-style: none;
+  color: var(--text1);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.number {
+  background-color: var(--number);
+}
+.btn:hover {
+  background-color: var(--bg2);
+  color: white;
+}
+.equal {
+  background-color: var(--bg3);
+  font-size: 1.5rem;
+  color: white;
+}
+
+.calculator {
+  min-height: 40vh;
+  width: 100vw;
+  background-color: var(--bg1);
+  padding: 1rem;
+  display: grid;
+  row-gap: 10px;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1px;
+  column-gap: 1px;
+  grid-auto-rows: 50px;
+}
+
+.calculator-display {
+  background-color: var(--bg4);
+  font-size: 4rem;
+  height: 15vh;
+  border-radius: var(--borderRadius);
+}
+
+.equal {
+  grid-row: span 2;
+}
+
+.is-depressed {
+  background-color: var(--bg5);
+  color: white;
+}
+
+@media screen and (min-width: 576px) {
+  .calculator {
+    max-width: 500px;
+  }
+}
