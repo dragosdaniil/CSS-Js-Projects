@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://kit.fontawesome.com/86bccfe578.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 class="logo">planets</h2>
+        <button class="toggle-navbar"><i class="fas fa-bars"></i></button>
+        <ul class="link-list">
+          <li class="link" id="mercury">mercury</li>
+          <li class="link" id="venus">venus</li>
+          <li class="link" id="earth">earth</li>
+          <li class="link" id="mars">mars</li>
+          <li class="link" id="jupiter">jupiter</li>
+          <li class="link" id="uranus">uranus</li>
+          <li class="link" id="neptune">neptune</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="planet">
+        <article class="img-container">
+          <img src="./images/earth.jpg" alt="" />
+        </article>
+        <article class="info-container">
+          <h1>earth</h1>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
+            accusantium inventore, laboriosam rem explicabo nesciunt? Eos quo
+            laudantium excepturi sit placeat aspernatur incidunt, deserunt illo
+            dolor magnam nobis aliquid a vel ex minima molestiae veniam quod
+            natus! Eos, consequatur similique.
+          </p>
+          <p class="description">
+            Source
+            <a href="#"
+              >Wikipedia <i class="fas fa-external-link-square-alt"></i
+            ></a>
+          </p>
+          <div class="tabs">
+            <button class="tab" id="overview"><span>01</span> overview</button>
+            <button class="tab" id="structure">
+              <span>02</span> internal <span class="hide">structure</span>
+            </button>
+            <button class="tab" id="geology">
+              <span>03</span> surface <span class="hide">geology</span>
+            </button>
+          </div>
+        </article>
+      </section>
+      <section class="general-info">
+        <div class="info" id="rotation">
+          <p>rotation time</p>
+          <p>365 days</p>
+        </div>
+        <div class="info" id="revolution">
+          <p>revolution time</p>
+          <p>24 hours</p>
+        </div>
+        <div class="info" id="radius">
+          <p>radius</p>
+          <p>6371 km</p>
+        </div>
+        <div class="info" id="temp">
+          <p>average temp.</p>
+          <p>16*C</p>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
